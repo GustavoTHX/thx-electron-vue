@@ -1,26 +1,31 @@
+/* eslint-disable */
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <v-app>
+    <v-app-bar app color="info">
+      <v-toolbar-title>THX - Electron</v-toolbar-title>
+    </v-app-bar>
+
+    <v-main>
+      <v-container>
+        <Home/>
+      </v-container>
+    </v-main>
+  </v-app>
+  
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 
+import Home from './components/Home.vue';
 export default {
   name: "App",
+
   components: {
-    HelloWorld,
+    Home
   },
+
+  data: () => ({
+    //
+  }),
 };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
